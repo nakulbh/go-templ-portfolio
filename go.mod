@@ -1,4 +1,4 @@
-module github.com/templui/templui-quickstart
+module github.com/nakulbh/go-templ-portfolio
 
 go 1.24.0
 

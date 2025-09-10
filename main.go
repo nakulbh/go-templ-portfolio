@@ -6,8 +6,8 @@ import (
 	"os"
 
 	"github.com/a-h/templ"
-	"github.com/templui/templui-quickstart/assets"
-	"github.com/templui/templui-quickstart/ui/pages"
+	"github.com/nakulbh/go-templ-portfolio/assets"
+	"github.com/nakulbh/go-templ-portfolio/ui/pages"
 	"github.com/joho/godotenv"
 )
 
