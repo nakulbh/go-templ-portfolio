@@ -5,7 +5,15 @@ module.exports = {
     "./**/*.templ"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        obsidian: '#1b1c1d',
+      },
+      fontFamily: {
+        sans: ["Gilda Display", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
+    },
   },
   plugins: [],
 }

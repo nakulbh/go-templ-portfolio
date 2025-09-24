@@ -2,8 +2,8 @@
   "profile": {
     "profile_pic": "https://deadline.com/wp-content/uploads/2023/08/RAM-S7-DDT-image.jpg",
     "name": "Nakul Bhardwaj",
-    "title": "",
-    "intro": "",
+    "title": "Software Engineer & Quantitative Researcher",
+    "intro": "Software engineer and quantitative researcher who somehow convinced computers to trade better than me. Leading quant strategies at Cosmikcapital while also teaching AI to be less dramatic and backends to scale without complaining.",
     "location": "",
     "contact": {
       "email": "nakulbhardwaj37@gmail.com",
@@ -11,8 +11,8 @@
       "website": "https://www.linkedin.com/in/nakul-bhardwaj/"
     },
     "cta": {
-      "label": "",
-      "link": ""
+      "label": "View My Work",
+      "link": "#experience"
     }
   },
   "experience": [
@@ -26,18 +26,10 @@
     },
     {
       "company": "Dynalink",
-      "role": "AI/ML & GenAI",
-      "description": "Fine-tuned Whisper for transcription and built AI inference systems. Developed scalable backend services with Docker, AWS, and integrated AI models using Python tech stack.",
-      "start_year": "Sep 2024",
-      "end_year": "Present",
-      "link": "https://www.dynalink.in/"
-    },
-    {
-      "company": "Dynalink",
-      "role": "Software Engineer",
-      "description": "Developed backend services using Node.js, Express, and Nest.JS. Deployed on AWS with EC2, S3, Lambda. Set up CI/CD pipelines and managed Nginx for load balancing.",
+      "role": "AI/ML Engineer & Full-Stack Developer",
+      "description": "Started as Software Engineer developing backend services with Node.js, Express, Nest.JS, and AWS deployment. Advanced to AI/ML role fine-tuning Whisper for transcription, building AI inference systems, and integrating AI models using Python tech stack.",
       "start_year": "July 2024",
-      "end_year": "Sep 2024",
+      "end_year": "Present",
       "link": "https://www.dynalink.in/"
     }
   ],
