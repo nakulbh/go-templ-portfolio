@@ -1,0 +1,205 @@
+package pages
+
+import (
+	"github.com/nakulbh/go-templ-portfolio/models"
+)
+
+templ Home(data *models.PortfolioData) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>{ data.Profile.Name } - Portfolio</title>
+			<link href="/assets/css/output.css" rel="stylesheet"/>
+		</head>
+		<body class="bg-white font-mono">
+			<div class="min-h-screen">
+				<main class="max-w-2xl mx-auto px-8 py-16">
+					<div class="text-center mb-16">
+						if data.Profile.ProfilePic != "" {
+							<img 
+								src={ data.Profile.ProfilePic } 
+								alt={ data.Profile.Name }
+								class="w-24 h-24 rounded-lg mx-auto mb-6 object-cover border-2 border-gray-200"
+							/>
+						}
+						<h1 class="text-2xl font-bold mb-2">
+							Hey, I'm { data.Profile.Name }.
+						</h1>
+						if data.Profile.Title != "" {
+							<p class="text-xl mb-4">
+								{ data.Profile.Title }
+							</p>
+						}
+						if data.Profile.Intro != "" {
+							<p class="text-sm text-gray-600 leading-tight mb-6">
+								{ data.Profile.Intro }
+							</p>
+						}
+						if data.Profile.CTA.Label != "" && data.Profile.CTA.Link != "" {
+							<a href={ templ.SafeURL(data.Profile.CTA.Link) } class="text-blue-600 hover:underline">
+								{ data.Profile.CTA.Label } →
+							</a>
+						}
+					</div>
+					if len(data.Experience) > 0 {
+						<section class="mb-16">
+							<h2 class="text-2xl font-bold mb-8">Experience</h2>
+							<div class="space-y-8">
+								for _, exp := range data.Experience {
+									<div class="border-t border-gray-200 pt-6">
+										<div class="flex items-start justify-between mb-2">
+											<div>
+												<h3 class="font-bold">{ exp.Role }</h3>
+												<p class="text-sm text-gray-600">{ exp.Company }</p>
+											</div>
+											<span class="text-sm text-gray-500">{ exp.StartYear } - { exp.EndYear }</span>
+										</div>
+										<p class="text-sm text-gray-600 mb-2 leading-tight">{ exp.Description }</p>
+										if exp.Link != "" {
+											<a href={ templ.SafeURL(exp.Link) } class="text-sm text-gray-400 hover:text-blue-600">
+												{ exp.Link } →
+											</a>
+										}
+									</div>
+								}
+							</div>
+						</section>
+					}
+					if len(data.Projects) > 0 {
+						<section class="mb-16">
+							<h2 class="text-2xl font-bold mb-8">Projects</h2>
+							<div class="space-y-8">
+								for _, project := range data.Projects {
+									<div class="border-t border-gray-200 pt-6">
+										<div class="flex items-start justify-between mb-2">
+											<h3 class="font-bold">{ project.Name }</h3>
+											if project.Year != "" {
+												<span class="text-sm text-gray-500">{ project.Year }</span>
+											}
+										</div>
+										<p class="text-sm text-gray-600 mb-2 leading-tight">{ project.Description }</p>
+										if len(project.Technologies) > 0 {
+											<div class="flex flex-wrap gap-2 mb-2">
+												for _, tech := range project.Technologies {
+													<span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">{ tech }</span>
+												}
+											</div>
+										}
+										if project.Link != "" {
+											<a href={ templ.SafeURL(project.Link) } class="text-sm text-gray-400 hover:text-blue-600">
+												{ project.Link } →
+											</a>
+										}
+									</div>
+								}
+							</div>
+						</section>
+					}
+					<section class="mb-16">
+						<h2 class="text-2xl font-bold mb-8">Skills</h2>
+						<div class="space-y-6">
+							if len(data.Skills.ProgrammingLanguages) > 0 {
+								<div>
+									<h3 class="font-semibold mb-2">Programming Languages</h3>
+									<div class="flex flex-wrap gap-2">
+										for _, lang := range data.Skills.ProgrammingLanguages {
+											<span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">{ lang }</span>
+										}
+									</div>
+								</div>
+							}
+							if len(data.Skills.Backend) > 0 {
+								<div>
+									<h3 class="font-semibold mb-2">Backend & Databases</h3>
+									<div class="flex flex-wrap gap-2">
+										for _, backend := range data.Skills.Backend {
+											<span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">{ backend }</span>
+										}
+									</div>
+								</div>
+							}
+							if len(data.Skills.DevopsAndCICD) > 0 {
+								<div>
+									<h3 class="font-semibold mb-2">DevOps & CI/CD</h3>
+									<div class="flex flex-wrap gap-2">
+										for _, devops := range data.Skills.DevopsAndCICD {
+											<span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">{ devops }</span>
+										}
+									</div>
+								</div>
+							}
+							if len(data.Skills.AIAndGenerativeAI) > 0 {
+								<div>
+									<h3 class="font-semibold mb-2">AI & Generative AI</h3>
+									<div class="flex flex-wrap gap-2">
+										for _, ai := range data.Skills.AIAndGenerativeAI {
+											<span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">{ ai }</span>
+										}
+									</div>
+								</div>
+							}
+						</div>
+					</section>
+					if len(data.Education) > 0 {
+						<section class="mb-16">
+							<h2 class="text-2xl font-bold mb-8">Education</h2>
+							<div class="space-y-6">
+								for _, edu := range data.Education {
+									<div class="border-t border-gray-200 pt-6">
+										<div class="flex items-start justify-between mb-2">
+											<div>
+												<h3 class="font-bold">{ edu.Degree }</h3>
+												<p class="text-sm text-gray-600">{ edu.Institution }</p>
+											</div>
+											<span class="text-sm text-gray-500">{ edu.Year }</span>
+										</div>
+									</div>
+								}
+							</div>
+						</section>
+					}
+					<section class="mb-16">
+						<h2 class="text-2xl font-bold mb-8">Contact</h2>
+						<div class="space-y-4">
+							if data.Profile.Contact.Email != "" {
+								<div>
+									<span class="text-sm text-gray-600">Email: </span>
+									<a href={ "mailto:" + data.Profile.Contact.Email } class="text-sm text-blue-600 hover:underline">
+										{ data.Profile.Contact.Email }
+									</a>
+								</div>
+							}
+							if data.Profile.Contact.Phone != "" {
+								<div>
+									<span class="text-sm text-gray-600">Phone: </span>
+									<a href={ "tel:" + data.Profile.Contact.Phone } class="text-sm text-blue-600 hover:underline">
+										{ data.Profile.Contact.Phone }
+									</a>
+								</div>
+							}
+							if data.Profile.Contact.Website != "" {
+								<div>
+									<span class="text-sm text-gray-600">Website: </span>
+									<a href={ templ.SafeURL(data.Profile.Contact.Website) } class="text-sm text-blue-600 hover:underline" target="_blank">
+										{ data.Profile.Contact.Website }
+									</a>
+								</div>
+							}
+							if len(data.Socials) > 0 {
+								<div class="flex gap-4 mt-4">
+									for _, social := range data.Socials {
+										<a href={ templ.SafeURL(social.Link) } class="text-sm text-blue-600 hover:underline" target="_blank">
+											{ social.Platform }
+										</a>
+									}
+								</div>
+							}
+						</div>
+					</section>
+				</main>
+			</div>
+		</body>
+	</html>
+}

@@ -1,0 +1,108 @@
+{
+  "profile": {
+    "profile_pic": "https://deadline.com/wp-content/uploads/2023/08/RAM-S7-DDT-image.jpg",
+    "name": "Nakul Bhardwaj",
+    "title": "",
+    "intro": "",
+    "location": "",
+    "contact": {
+      "email": "nakulbhardwaj37@gmail.com",
+      "phone": "+91 9817829678",
+      "website": "https://www.linkedin.com/in/nakul-bhardwaj/"
+    },
+    "cta": {
+      "label": "",
+      "link": ""
+    }
+  },
+  "experience": [
+    {
+      "company": "Cosmikcapital",
+      "role": "Tech Lead Quantitative Research & Trading Systems",
+      "description": "Lead quantitative trading strategies development with focus on statistical edge and risk management. Design backtesting frameworks and live trading systems. Apply ML and optimization for performance enhancement.",
+      "start_year": "June 2025",
+      "end_year": "present",
+      "link": ""
+    },
+    {
+      "company": "Dynalink",
+      "role": "AI/ML & GenAI",
+      "description": "Fine-tuned Whisper for transcription and built AI inference systems. Developed scalable backend services with Docker, AWS, and integrated AI models using Python tech stack.",
+      "start_year": "Sep 2024",
+      "end_year": "Present",
+      "link": "https://www.dynalink.in/"
+    },
+    {
+      "company": "Dynalink",
+      "role": "Software Engineer",
+      "description": "Developed backend services using Node.js, Express, and Nest.JS. Deployed on AWS with EC2, S3, Lambda. Set up CI/CD pipelines and managed Nginx for load balancing.",
+      "start_year": "July 2024",
+      "end_year": "Sep 2024",
+      "link": "https://www.dynalink.in/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Cloud-assist",
+      "description": "AI-powered terminal assistant for DevOps built with Go CLI and Python LangGraph agent. Provides natural language command translation with secure approval for cloud automation.",
+      "technologies": [
+        "Go",
+        "Python",
+        "LangGraph"
+      ],
+      "year": "",
+      "link": "https://github.com/nakulbh/cloud-assist"
+    },
+    {
+      "name": "Zipline-engine-backtesting-wrapper",
+      "description": "Backtesting framework wrapping Zipline-Reloaded with MLflow integration for hyperparameter tuning and performance analytics in systematic trading research.",
+      "technologies": [
+        "Zipline-Reloaded",
+        "PyFolio-Reloaded",
+        "MLflow"
+      ],
+      "year": "",
+      "link": "https://github.com/nakulbh/zipline-engine"
+    }
+  ],
+  "skills": {
+    "devops_and_ci/cd": [
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+      "Jenkins",
+      "Git",
+      "AWS"
+    ],
+    "ai_and_generative_ai": [
+      "LangGraph",
+      "Google AI SDK"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Golang",
+      "Python"
+    ],
+    "backend": [
+      "Python (FastAPI, Celery, SQLAlchemy, RabbitMQ, Kafka)",
+      "TypeScript (Express.js, Nest.JS, Prisma, Drizzle ORM, Socket.IO)",
+      "Go (Gin, Fiber, Echo, Chi, gRPC, Gorilla WebSocket)",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "DuckDb",
+      "SqLite",
+      "Redis",
+      "Elasticsearch",
+      "Terraform",
+      "Prometheus"
+    ]
+  },
+  "socials": [
+    {
+      "platform": "LinkedIn",
+      "link": "https://www.linkedin.com/in/nakul-bhardwaj/",
+      "icon": "linkedin"
+    }
+  ]
+}
