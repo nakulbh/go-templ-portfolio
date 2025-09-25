@@ -30,6 +30,9 @@ ENV GO_ENV=production
 # Copy the binary from the build stage
 COPY --from=build /app/main .
 
+# Copy data directory
+COPY data/ data/
+
 # Expose the port your application runs on
 EXPOSE 8090
 
